@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour {
     public float stun_timer = 0;
     float punch_stun = 0.8f;
     Rigidbody body;
-    NavMeshAgent mesh_agent;
+    UnityEngine.AI.NavMeshAgent mesh_agent;
     bool looking = false;
     public bool looking_right_way = true;
     public Quaternion look_target;
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour {
     // Use this for initialization
     void Start() {
         body = gameObject.GetComponent<Rigidbody>();
-        mesh_agent = gameObject.GetComponent<NavMeshAgent>();
+        mesh_agent = gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
         default_color = this.GetComponent<Renderer>().material.color;
 
         initDetectArea();
